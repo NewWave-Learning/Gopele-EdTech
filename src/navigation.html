@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gopele EdTech - Navigation Helper</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: linear-gradient(135deg, #1f60d8 0%, #1850b8 100%);
+      color: #333;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    header {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+    
+    h1 {
+      color: #1f60d8;
+      margin-bottom: 10px;
+    }
+    
+    .subtitle {
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .card h2 {
+      color: #1f60d8;
+      font-size: 18px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    
+    .badge-student { background: #dbeafe; color: #1e40af; }
+    .badge-teacher { background: #e9d5ff; color: #6b21a8; }
+    .badge-admin { background: #fef3c7; color: #92400e; }
+    .badge-gopele { background: #d1fae5; color: #065f46; }
+    .badge-org { background: #ffe4e6; color: #be123c; }
+    
+    .link-list {
+      list-style: none;
+    }
+    
+    .link-list li {
+      margin-bottom: 8px;
+    }
+    
+    .link-list a {
+      display: block;
+      padding: 10px 12px;
+      background: #f3f4f6;
+      color: #1f60d8;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    
+    .link-list a:hover {
+      background: #1f60d8;
+      color: white;
+      transform: translateX(4px);
+    }
+    
+    .quick-links {
+      background: #face55;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+    
+    .quick-links h3 {
+      color: #232323;
+      margin-bottom: 12px;
+    }
+    
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    
+    .quick-link {
+      display: block;
+      padding: 12px;
+      background: white;
+      color: #1f60d8;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    
+    .quick-link:hover {
+      background: #1f60d8;
+      color: white;
+      transform: scale(1.05);
+    }
+    
+    footer {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+    
+    .tip {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 12px;
+      border-radius: 6px;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎓 Gopele EdTech - Navigation Helper</h1>
+      <p class="subtitle">Click any link below to navigate to that screen. All screens are accessible via URL routing.</p>
+    </header>
+    
+    <div class="quick-links">
+      <h3>⚡ Quick Access - Most Used Routes</h3>
+      <div class="quick-links-grid">
+        <a href="#home?role=student&userName=John%20Doe" class="quick-link">Student Home</a>
+        <a href="#teacherDashboard?role=teacher&userName=Ms.%20Smith" class="quick-link">Teacher Dashboard</a>
+        <a href="#organizationDashboard?role=admin&userName=Seev%20Admin&organizationName=Seev" class="quick-link">Organization</a>
+        <a href="#coursesPopulated?role=gopeleAdmin&userName=Master%20Admin" class="quick-link">Gopele Admin</a>
+        <a href="#adminDashboard?role=admin&userName=Administrator" class="quick-link">School Admin</a>
+      </div>
+    </div>
+    
+    <div class="grid">
+      <!-- Landing & Auth -->
+      <div class="card">
+        <h2>🏠 Landing & Authentication</h2>
+        <ul class="link-list">
+          <li><a href="#landing">Landing Page</a></li>
+          <li><a href="#login">Student Login</a></li>
+          <li><a href="#adminLogin">Admin Login</a></li>
+          <li><a href="#organizationLogin">Organization Login</a></li>
+        </ul>
+      </div>
+      
+      <!-- Student Screens -->
+      <div class="card">
+        <h2><span class="badge badge-student">Student</span> Student Screens</h2>
+        <ul class="link-list">
+          <li><a href="#home?role=student&userName=John%20Doe">Home Dashboard</a></li>
+          <li><a href="#dashboard?role=student&userName=John%20Doe">Progress Dashboard</a></li>
+          <li><a href="#subject?role=student&userName=John%20Doe&subjectName=Space">Subject (Space)</a></li>
+          <li><a href="#lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=What%20is%20Space&lessonNumber=1">Lesson View</a></li>
+          <li><a href="#aiMentor?role=student&userName=John%20Doe">AI Mentor</a></li>
+          <li><a href="#feedback?role=student&userName=John%20Doe">Feedback</a></li>
+        </ul>
+      </div>
+      
+      <!-- Teacher Screens -->
+      <div class="card">
+        <h2><span class="badge badge-teacher">Teacher</span> Teacher Screens</h2>
+        <ul class="link-list">
+          <li><a href="#teacherDashboard?role=teacher&userName=Ms.%20Smith">Teacher Dashboard</a></li>
+          <li><a href="#createInstitute?role=teacher&userName=Ms.%20Smith">Create Institute</a></li>
+          <li><a href="#addStudents?role=teacher&userName=Ms.%20Smith&instituteName=Demo%20School&instituteCode=INST-DEMO">Add Students</a></li>
+        </ul>
+      </div>
+      
+      <!-- Organization Onboarding -->
+      <div class="card">
+        <h2><span class="badge badge-org">Org</span> Organization Onboarding</h2>
+        <ul class="link-list">
+          <li><a href="#organizationLogin">1. Login</a></li>
+          <li><a href="#organizationSetPassword?organizationName=Seev">2. Set Password</a></li>
+          <li><a href="#organizationSize?organizationName=Seev">3. Organization Size</a></li>
+          <li><a href="#organizationIndustry?organizationName=Seev&organizationSize=11-30">4. Select Industry</a></li>
+          <li><a href="#organizationCongratulations?role=admin&userName=Seev%20Admin&organizationName=Seev&organizationSize=11-30&organizationIndustry=Education">5. Congratulations</a></li>
+          <li><a href="#organizationDashboardLanding?role=admin&userName=Seev%20Admin&organizationName=Seev">6. Dashboard Setup</a></li>
+        </ul>
+      </div>
+      
+      <!-- Organization Dashboard -->
+      <div class="card">
+        <h2><span class="badge badge-org">Org</span> Organization Dashboard</h2>
+        <ul class="link-list">
+          <li><a href="#organizationDashboard?role=admin&userName=Seev%20Admin&organizationName=Seev">Dashboard</a></li>
+          <li><a href="#organizationCourses?role=admin&userName=Seev%20Admin&organizationName=Seev">Courses</a></li>
+          <li><a href="#organizationInstructors?role=admin&userName=Seev%20Admin&organizationName=Seev">Instructors</a></li>
+          <li><a href="#organizationLearners?role=admin&userName=Seev%20Admin&organizationName=Seev">Learners (Empty)</a></li>
+          <li><a href="#organizationLearners?role=admin&userName=Seev%20Admin&organizationName=Seev&hasLearners=true">Learners (With Data)</a></li>
+          <li><a href="#organizationAddLearner?role=admin&userName=Seev%20Admin&organizationName=Seev">Add Learner</a></li>
+        </ul>
+      </div>
+      
+      <!-- School Admin -->
+      <div class="card">
+        <h2><span class="badge badge-admin">Admin</span> School Admin</h2>
+        <ul class="link-list">
+          <li><a href="#adminDashboard?role=admin&userName=Administrator">Admin Dashboard</a></li>
+          <li><a href="#institutesPage?role=admin&userName=Administrator">Institutions List</a></li>
+          <li><a href="#addInstitute?role=admin&userName=Administrator">Add Institute</a></li>
+          <li><a href="#teamDetails?role=admin&userName=Administrator">Team Management</a></li>
+          <li><a href="#instituteDetails?role=admin&userName=Administrator&instituteName=New%20Horizon%20High">Institute Details</a></li>
+          <li><a href="#activateSubjects?role=admin&userName=Administrator&instituteName=New%20Horizon%20High">Activate Subjects</a></li>
+        </ul>
+      </div>
+      
+      <!-- Gopele Admin - Courses -->
+      <div class="card">
+        <h2><span class="badge badge-gopele">Gopele</span> Gopele Admin - Courses</h2>
+        <ul class="link-list">
+          <li><a href="#courses?role=gopeleAdmin&userName=Master%20Admin">Courses (Empty)</a></li>
+          <li><a href="#coursesPopulated?role=gopeleAdmin&userName=Master%20Admin">Courses (Populated)</a></li>
+          <li><a href="#createNewSubject?role=gopeleAdmin&userName=Master%20Admin">Create New Subject</a></li>
+          <li><a href="#emptySubject?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science">Empty Subject</a></li>
+          <li><a href="#subjectWithLessons?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Molecular%20Biology">Subject With Lessons</a></li>
+          <li><a href="#updateSubject?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science">Update Subject</a></li>
+        </ul>
+      </div>
+      
+      <!-- Gopele Admin - Content Creation -->
+      <div class="card">
+        <h2><span class="badge badge-gopele">Gopele</span> Content Creation Flow</h2>
+        <ul class="link-list">
+          <li><a href="#topicDetails?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology">1. Topic Details</a></li>
+          <li><a href="#createLessonDetails?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro">2. Lesson Details</a></li>
+          <li><a href="#lessonContent?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space">3. Content Editor</a></li>
+          <li><a href="#quizCreator?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space">4. Quiz Creator</a></li>
+          <li><a href="#quizCreated?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space">5. Quiz Success</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="card">
+      <h2>💡 Tips for Testing</h2>
+      <ul style="list-style: disc; margin-left: 20px; color: #666; line-height: 1.8;">
+        <li><strong>Mobile Testing:</strong> Press F12 → Toggle Device Toolbar (Ctrl+Shift+M) → Select iPhone or set width to 375px</li>
+        <li><strong>URL Parameters:</strong> All navigation state is in the URL - you can bookmark any state</li>
+        <li><strong>Role Switching:</strong> Click different role links to test different user experiences</li>
+        <li><strong>Direct URLs:</strong> Share exact URLs with teammates to reproduce specific states</li>
+        <li><strong>Browser Back:</strong> Full browser history support - use back/forward buttons</li>
+      </ul>
+      
+      <div class="tip">
+        <strong>📖 Documentation:</strong> See <code>ROUTING_GUIDE.md</code> for complete URL reference and all available parameters.
+      </div>
+    </div>
+    
+    <footer>
+      <p><strong>Gopele EdTech</strong> - Production Ready Language Learning Platform</p>
+      <p style="margin-top: 8px;">48+ Screens • 5 User Roles • Full Mobile Support • URL-Based Routing</p>
+      <p style="margin-top: 8px; font-size: 12px;">Version 2.0 - November 1, 2025</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+GOPELE EDTECH - ALL ROUTES FOR TESTING
+========================================
+
+Base URL: http://localhost:5173/
+
+PUBLIC ROUTES (No Login)
+--------------------------
+[ ] #landing
+[ ] #login
+[ ] #adminLogin
+[ ] #organizationLogin
+
+
+STUDENT ROUTES (role=student&userName=John%20Doe)
+--------------------------------------------------
+[ ] #home?role=student&userName=John%20Doe
+[ ] #dashboard?role=student&userName=John%20Doe
+[ ] #subject?role=student&userName=John%20Doe&subjectName=Space
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=What%20is%20Space&lessonNumber=1
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=The%20Solar%20System&lessonNumber=2
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Stars%20and%20Galaxies&lessonNumber=3
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Planets&lessonNumber=4
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Moons&lessonNumber=5
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Asteroids&lessonNumber=6
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Comets&lessonNumber=7
+[ ] #lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=Space%20Exploration&lessonNumber=8
+[ ] #aiMentor?role=student&userName=John%20Doe
+[ ] #feedback?role=student&userName=John%20Doe
+
+
+TEACHER ROUTES (role=teacher&userName=Ms.%20Smith)
+---------------------------------------------------
+[ ] #teacherDashboard?role=teacher&userName=Ms.%20Smith
+[ ] #createInstitute?role=teacher&userName=Ms.%20Smith
+[ ] #addStudents?role=teacher&userName=Ms.%20Smith&instituteName=Demo%20School&instituteCode=INST-DEMO
+
+
+SCHOOL ADMIN ROUTES (role=admin&userName=Administrator)
+--------------------------------------------------------
+[ ] #adminDashboard?role=admin&userName=Administrator
+[ ] #institutesPage?role=admin&userName=Administrator
+[ ] #instituteDetails?role=admin&userName=Administrator&instituteName=Springfield%20High
+[ ] #activateSubjects?role=admin&userName=Administrator&instituteName=Springfield%20High
+[ ] #teamDetails?role=admin&userName=Administrator
+[ ] #addMember?role=admin&userName=Administrator
+[ ] #accountReady?role=admin&userName=Administrator
+[ ] #addInstitute?role=admin&userName=Administrator
+
+
+ORGANIZATION ONBOARDING (Guest → Admin)
+----------------------------------------
+[ ] #organizationLogin
+[ ] #organizationSetPassword?organizationName=Seev
+[ ] #organizationSize?organizationName=Seev
+[ ] #organizationIndustry?organizationName=Seev
+[ ] #organizationCongratulations?organizationName=Seev
+
+
+ORGANIZATION DASHBOARD (role=admin&userName=Seev%20Admin)
+----------------------------------------------------------
+[ ] #organizationDashboardLanding?role=admin&userName=Seev%20Admin&organizationName=Seev
+[ ] #organizationDashboard?role=admin&userName=Seev%20Admin&organizationName=Seev
+[ ] #organizationCourses?role=admin&userName=Seev%20Admin&organizationName=Seev
+[ ] #organizationInstructors?role=admin&userName=Seev%20Admin&organizationName=Seev
+[ ] #organizationLearners?role=admin&userName=Seev%20Admin&organizationName=Seev&hasLearners=true
+[ ] #organizationLearners?role=admin&userName=Seev%20Admin&organizationName=Seev&hasLearners=false
+[ ] #organizationAddLearner?role=admin&userName=Seev%20Admin&organizationName=Seev
+
+
+GOPELE ADMIN - COURSES (role=gopeleAdmin&userName=Master%20Admin)
+------------------------------------------------------------------
+[ ] #courses?role=gopeleAdmin&userName=Master%20Admin
+[ ] #coursesPopulated?role=gopeleAdmin&userName=Master%20Admin
+
+
+GOPELE ADMIN - SUBJECTS (role=gopeleAdmin&userName=Master%20Admin)
+-------------------------------------------------------------------
+[ ] #createNewSubject?role=gopeleAdmin&userName=Master%20Admin
+[ ] #emptySubject?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology
+[ ] #subjectWithLessons?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Molecular%20Biology
+[ ] #topicDetails?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology
+[ ] #updateSubject?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science
+
+
+GOPELE ADMIN - LESSONS (role=gopeleAdmin&userName=Master%20Admin)
+------------------------------------------------------------------
+[ ] #createLessonDetails?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Introduction
+[ ] #lessonContent?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space
+[ ] #lessonContent?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space&pageNumber=1
+[ ] #lessonContent?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space&pageNumber=2
+
+
+GOPELE ADMIN - QUIZ (role=gopeleAdmin&userName=Master%20Admin)
+---------------------------------------------------------------
+[ ] #quizCreator?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space
+[ ] #quizCreated?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space
+
+
+GOPELE ADMIN - INSTITUTES (role=gopeleAdmin&userName=Master%20Admin)
+---------------------------------------------------------------------
+[ ] #addInstitute?role=gopeleAdmin&userName=Master%20Admin
+
+
+========================================
+TOTAL ROUTES: 50+
+========================================
+
+
+QUICK COPY-PASTE URLS
+========================================
+
+PUBLIC
+------
+http://localhost:5173/#landing
+http://localhost:5173/#login
+http://localhost:5173/#adminLogin
+http://localhost:5173/#organizationLogin
+
+STUDENT
+-------
+http://localhost:5173/#home?role=student&userName=John%20Doe
+http://localhost:5173/#dashboard?role=student&userName=John%20Doe
+http://localhost:5173/#subject?role=student&userName=John%20Doe&subjectName=Space
+http://localhost:5173/#lesson?role=student&userName=John%20Doe&subjectName=Space&lessonName=What%20is%20Space&lessonNumber=1
+http://localhost:5173/#aiMentor?role=student&userName=John%20Doe
+http://localhost:5173/#feedback?role=student&userName=John%20Doe
+
+TEACHER
+-------
+http://localhost:5173/#teacherDashboard?role=teacher&userName=Ms.%20Smith
+http://localhost:5173/#createInstitute?role=teacher&userName=Ms.%20Smith
+http://localhost:5173/#addStudents?role=teacher&userName=Ms.%20Smith&instituteName=Demo%20School&instituteCode=INST-DEMO
+
+SCHOOL ADMIN
+------------
+http://localhost:5173/#adminDashboard?role=admin&userName=Administrator
+http://localhost:5173/#institutesPage?role=admin&userName=Administrator
+http://localhost:5173/#instituteDetails?role=admin&userName=Administrator&instituteName=Springfield%20High
+http://localhost:5173/#teamDetails?role=admin&userName=Administrator
+http://localhost:5173/#addMember?role=admin&userName=Administrator
+
+ORGANIZATION
+------------
+http://localhost:5173/#organizationLogin
+http://localhost:5173/#organizationSetPassword?organizationName=Seev
+http://localhost:5173/#organizationSize?organizationName=Seev
+http://localhost:5173/#organizationIndustry?organizationName=Seev
+http://localhost:5173/#organizationDashboard?role=admin&userName=Seev%20Admin&organizationName=Seev
+http://localhost:5173/#organizationLearners?role=admin&userName=Seev%20Admin&organizationName=Seev&hasLearners=true
+http://localhost:5173/#organizationAddLearner?role=admin&userName=Seev%20Admin&organizationName=Seev
+
+GOPELE ADMIN
+------------
+http://localhost:5173/#courses?role=gopeleAdmin&userName=Master%20Admin
+http://localhost:5173/#coursesPopulated?role=gopeleAdmin&userName=Master%20Admin
+http://localhost:5173/#createNewSubject?role=gopeleAdmin&userName=Master%20Admin
+http://localhost:5173/#subjectWithLessons?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Molecular%20Biology
+http://localhost:5173/#lessonContent?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space
+http://localhost:5173/#quizCreator?role=gopeleAdmin&userName=Master%20Admin&subjectName=Science&topicName=Biology&chapterName=Intro&lessonTitle=What%20is%20Space
+
+
+========================================
+MOBILE TESTING
+========================================
+
+Add &mobile=true OR resize browser < 768px
+
+Examples:
+http://localhost:5173/#home?role=student&userName=John%20Doe&mobile=true
+http://localhost:5173/#teacherDashboard?role=teacher&userName=Ms.%20Smith&mobile=true
+http://localhost:5173/#organizationDashboard?role=admin&userName=Seev%20Admin&organizationName=Seev&mobile=true
+
+
+========================================
+NOTES
+========================================
+
+1. Replace "localhost:5173" with your domain for production
+2. Use %20 for spaces in URLs
+3. Check browser console for navigation logs
+4. All routes support mobile versions (< 768px width)
+5. See ALL_ROUTES_TESTING.md for complete documentation
